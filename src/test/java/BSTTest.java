@@ -16,5 +16,17 @@ public class BSTTest {
         Assert.assertEquals(6,size);
     }
 
+    @Test
+    public void given_BST_searchReturns()
+    {
+        BinaryST bst= new BinaryST();
+        bst.add(51);
+        bst.add(32);
+        bst.add(75);
+        bst.add(5);
+        bst.add(38);
+        bst.add(89);
+        Assert.assertTrue(bst.searchKey(5));
+    }
 
 }
