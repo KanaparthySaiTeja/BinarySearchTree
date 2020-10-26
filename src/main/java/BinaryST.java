@@ -1,22 +1,22 @@
-
 public class BinaryST<K extends Comparable> {
 
-    bNode root = null;
-
+    bNode root=null;
     public void add(K key) {
-        root = addRecursively(root, key);
+        root=addRecursively(root,key);
     }
 
     private bNode addRecursively(bNode present, K key) {
-        if (present == null)
+        if(present==null)
             return new bNode(key);
-        int size = key.compareTo(present.key);
-        if (size == 0) {
+        int size=key.compareTo(present.key);
+        if(size==0){
             return present;
-        } else if (size > 0) {
-            present.right = addRecursively(present.right, key);
-        } else {
-            present.left = addRecursively(present.left, key);
+        }
+        else if(size>0){
+            present.right=addRecursively(present.right,key);
+        }
+        else{
+            present.left=addRecursively(present.left,key);
         }
         return present;
     }
