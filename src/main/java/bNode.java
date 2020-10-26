@@ -5,6 +5,7 @@ class bNode<K extends Comparable<K>> {
 
     bNode(K key)
     {
+        
         this.key=key;
         left=null;
         right=null;
